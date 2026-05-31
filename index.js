@@ -96,7 +96,7 @@ const createSlackOptions = (optionsArray) => {
 app.post('/webhook/slack/command', async (req, res) => {
     const { command, trigger_id } = req.body;
     console.log(`Received command: ${command}`);
-
+if (command === '/your-command-name') {
     let modal_title = '';
     let blocks = [];
     let callbackId = '';
